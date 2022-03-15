@@ -1,0 +1,56 @@
+.b-main-slider {
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 864px;
+    }
+
+    &__image {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+    }
+
+    &__text-wrap {
+        position: relative;
+        z-index: 1;
+    }
+
+    & .b-title {
+        margin-bottom: 60px;
+        width: 100%;
+        max-width:1044px;
+    }
+
+    & .b-text {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-main-slider {
+        &__wrapper {
+            height: 171px;
+        }
+
+        &__text-wrap {
+            width: 200px;
+        }
+
+        & .b-title {
+            width: auto;
+            margin-bottom: 13px;
+        }
+
+        & .b-text {
+            width: auto;
+            font-size: 9px;
+            line-height: 11px;
+        }
+    }
+}

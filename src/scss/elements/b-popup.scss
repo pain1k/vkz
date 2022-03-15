@@ -1,0 +1,252 @@
+.b-popup {
+    position: relative;
+    background: $white;
+    box-shadow: 0px 10px 50px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+    margin: 0 auto;
+    width: 1072px;
+    padding: 83px 58px!important;
+    margin-top: 211px;
+    &--authorized {
+        position: absolute;
+        margin-top: 0;
+        padding: 0!important;
+        right: 26px;
+        top: 113px;
+        z-index: 2;
+        width: 326px;
+        border-radius: 2px;
+        .b-title {
+            &.purple {
+                font-size: 18px;
+                line-height: 11px;
+            }
+        }
+    }
+
+    &--authorized & {
+
+        &__wrapper {
+            padding: 20px 31px;
+        }
+
+        &__description {
+            font-size: 14px;
+            line-height: 11px;
+            color: $light-gray;
+        }
+
+        &__content {
+            padding-top: 23px;
+        }
+
+        &__personal {
+            font-size: 14px;
+            line-height: 11px;
+            color: $black;
+        }
+
+        &__logout {
+            padding: 18px 31px;
+            width: 100%;
+            display: inline-block;
+            font-weight: $medium;
+            font-size: 14px;
+            line-height: 11px;
+            color: $base-color;
+            border-top: 1px solid #C4C4C4;
+        }
+
+        &__close {
+            top: 13px;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 17px;
+        right: 17px;
+        svg {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    &--login {
+        z-index: 2;
+
+        & .b-title {
+            &.purple {
+                margin-bottom: 49px;
+            }
+        }
+    }
+
+    &--login & {
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        &__form-wrap {
+            width: 45%;
+        }
+    }
+
+    &--new-password {
+        padding: 134px 120px;
+        margin-top: 211px;
+        z-index: 4;
+
+        & .b-title {
+            text-align: left;
+            font-size: 36px;
+            margin-bottom: 113px;
+            line-height: 40px;
+        }
+    }
+
+    &--new-password & {
+        &__form-wrap {
+            width: 65%;
+        }
+    }
+
+    &--private,
+    &--search,
+    &--enter {
+        z-index: 2;
+    }
+}
+
+@media (max-width: 1280px) {
+    .b-popup {
+        width: 80%;
+
+        &--login & {
+            &__content {
+                flex-direction: column;
+            }
+
+            &__form-wrap {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+
+        &--new-password {
+            padding: 54px 54px;
+        }
+
+        &--new-password & {
+            &__form-wrap {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .b-popup {
+        width: 100%;
+        height: 100vh;
+        margin-top: 79px;
+        border-radius:0;
+        
+        &__close {
+            display: none;
+        }
+
+        &--authorized {
+            width: 168px;
+            right: 58px;
+            top: 52px;
+            .b-title {
+                &.purple {
+                    font-size: 10px;
+                    line-height: 11px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &--authorized &{
+            .b-title {
+                &.purple {
+                    font-size: 10px;
+                    line-height: 11px;
+                }
+            }
+
+            &__wrapper {
+                padding: 9px 13px;
+            }
+
+            &__description {
+                font-size: 9px;
+                line-height: 11px;
+            }
+
+            &__content {
+                padding-top: 0;
+            }
+
+            &__personal {
+                font-size: 9px;
+                line-height: 11px;
+            }
+
+            &__logout {
+                font-size: 9px;
+                line-height: 11px;
+                padding: 9px 13px;
+            }
+
+            &__close {
+                top: 2px;
+                right: 9px;
+                svg {
+                    width: 11px;
+                    height: 11px;
+                }
+            }
+        }
+
+        &--login {
+            padding: 20px 54px;
+            border-radius:0;
+            height: auto;
+            & .b-title {
+                &.purple {
+                    font-size: 14px;
+                    text-align: left;
+                    margin-bottom: 19px;
+                }
+            }
+        }
+
+        &--login & {
+            &__close {
+                display: none;
+            }
+        }
+
+        &--new-password {
+            padding: 20px 36px;
+
+            & .b-title {
+                margin-bottom: 40px;
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+    }
+}

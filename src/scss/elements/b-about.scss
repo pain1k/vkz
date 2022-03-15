@@ -1,0 +1,44 @@
+.b-about {
+    padding: 71px 0 129px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    & .b-text {
+        width: 46%;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: $black;
+    }
+
+    &__image-wrap {
+        width: 46%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .b-about {
+        padding: 20px 0 11px 0;
+
+        &__image-wrap {
+            display: none;
+        }
+
+        & .b-text {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .b-about {
+        & .b-text {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}

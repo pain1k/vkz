@@ -1,0 +1,18 @@
+.b-title {
+    font-weight: $bold;
+    font-size: 48px;
+    line-height: 50px;
+    color: $white;
+
+    &.purple {
+        color: $base-color;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-title {
+        font-size: 11px;
+        line-height: 13px;
+    }
+}

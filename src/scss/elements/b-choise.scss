@@ -1,0 +1,48 @@
+.b-choise {
+    padding: 90px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    & .b-button {
+        width: 46%;
+        padding: 50px 0;
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .b-choise {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        & .b-button {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 36px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .b-choise {
+        padding: 42px 0 20px 0;
+
+        & .b-button {
+            font-size: 18px;
+            line-height: 21px;
+            padding: 20px 0;
+        }
+
+        &__wrapper {
+            padding: 19px 0;
+        }
+    }
+}

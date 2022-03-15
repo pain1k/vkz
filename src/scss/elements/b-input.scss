@@ -1,0 +1,28 @@
+.b-input {
+    width: 100%;
+    padding: 17px 29px;
+    font-size: 24px;
+    color: #787676;
+    border: 2px solid #A9A8A8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &::placeholder {
+        font-size: 24px;
+        color: #787676;
+    }
+}
+
+@media (max-width: 767px) {
+    .b-input {
+        padding: 13px 19px;
+        font-size: 14px;
+
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+}

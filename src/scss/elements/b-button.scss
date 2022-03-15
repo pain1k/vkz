@@ -1,0 +1,17 @@
+.b-button {
+    font-size: 24px;
+    line-height: 19px;
+    padding: 25px 43px;
+    border: none;
+    text-align: center;
+    background-color: $base-color;
+    cursor: pointer;
+    color: $white;
+    font-weight: $bold;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: $gray;
+        color: $white;
+    }
+}

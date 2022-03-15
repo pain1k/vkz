@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="google" value="notranslate">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">   
+  <link rel="stylesheet" href="./assets/style.css?v=1.0">
+  <title>Пациентам</title>
+</head>
+<body>
+  <main>
+    <section class="info">
+      <div class="container-xxl">
+      <div class="info-wrapper">
+        <div class="info-wrapper__text">
+          <div class="info-wrapper__text-title">Портал поддержки пациентов с ВЗК</div>
+          <div class="info-wrapper__text-description desktop">Алгоритмы лечения, новости мировой медицины,
+            разборы заболеваний, медицинские исследования в области воспалительных заболеваний кишечника и многое другое.</div>
+        </div>
+        <div class="info-wrapper__image">
+          <img src="./src/image/first.gif" alt="doctors">
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="help">
+        <h3 class="archive-wrapper__name special">Информационная поддержка сайта</h3>
+        <div class="help-wrapper">
+          <div class="help-wrapper__text">Межрегиональная общественная организация поддержки пациентов с Воспалительными Заболеваниями Кишечника (ВЗК)
+          </div>
+          <div class="help-wrapper__image">
+            <img src="./src/image/sureance.png" alt="sureance">
+          </div>
+        </div>
+    </section>
+    <section class="question">
+      <div class="question-wrapper">
+        <div class="question-wrapper__title">Если вы хотите задать вопрос специалисту, напишите нам:</div>
+        <form action="#" class="question-wrapper__form">
+          <input type="text" name="name" required placeholder="Имя*">
+          <input type="text" name="surname" required placeholder="Фамилия*">
+          <input type="text" name="city" required placeholder="Город*">
+          <input type="text" name="email" required placeholder="E-mail*">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+          <button type="submit" id="submitbtn">Отправить</button> 
+        </form>
+        <p class="question-wrapper__attention">Отправляя сообщение вы соглашаетесь с <a href="#" class="question-wrapper__attention-link">Политикой обработки персональных данных</a> и <a href="#" class="question-wrapper__attention-link">Политикой конфиденциальности.</a></p>
+        <div class="question-wrapper__title question-wrapper__title-success" id="success">
+          <p >Спасибо за вопрос!</p>
+          <p >Наши специалисты свяжутся с Вами в ближайшее время</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    let success=document.querySelector('#success');
+    let btn=document.getElementById('submitbtn');
+    let form=document.querySelector('.question-wrapper__form');
+    let title=document.querySelector('.question-wrapper__title');
+    let attention = document.querySelector('.question-wrapper__attention')
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      success.style.display='block';
+      form.style.display='none';
+      title.style.display='none';
+      attention.style.display='none';
+    })
+    console.log(1)
+  </script>
+</body>
+</html>

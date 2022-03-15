@@ -1,0 +1,167 @@
+.b-header {
+    width: 100%;
+    padding: 13px 0;
+    background: $white;
+
+    &__link-wrap {
+        margin-left: auto;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        margin-right: 25px;
+        font-size: 24px;
+        line-height: 28px;
+        color: $base-color;
+        font-weight: $medium;
+
+        &:not(:first-child) {
+            padding-left: 25px;
+            border-left: 1px solid $base-color;
+
+            &:hover,
+            &:active {
+                color: $base-color;
+                text-decoration: underline;
+            }
+        }
+
+        &:last-child {
+            display: none;
+            margin-right: 0;
+        }
+    }
+
+    &__search,
+    &__login,
+    &__hamburger {
+        stroke: $base-color;
+    }
+
+    &__logo {
+        width: 109px;
+        height: 109px;
+    }
+
+    &__contact,
+    &__login {
+        display: none;
+    }
+
+    &__close {
+        fill: $base-color;
+        display: none;
+    }
+
+    &__name {
+        display: none;
+        color: $base-color;
+    }
+
+    &__login-text {
+        font-size: 24px;
+        line-height: 28px;
+        color: $base-color;
+
+            &:hover,
+            &:active {
+                color: $base-color;
+                text-decoration: underline;
+            }
+    }
+
+    &.authorized & {
+        &__name {
+            display: inline-block;
+        }
+
+        &__login-text {
+            display: none;
+        }
+    }
+
+    svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .b-header {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-header {
+        padding: 10px 0;
+        position: relative;
+        z-index: 3;
+        &__contact,
+        &__login {
+            display: block;
+        }
+
+        &__link {
+            margin-right: 20px;
+            span {
+                display: none;
+            }
+
+            &:not(:first-child) {
+                padding-left: 0;
+                border-left: none;
+            }
+
+            &:last-child {
+                display: inline-block;
+                padding-left: 22px;
+                border-left: 1px solid $base-color;
+            }
+        }
+
+        &__logo {
+            width: 59px;
+            height: 59px;
+        }
+
+        &__link-wrap {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        &__name {
+            font-size: 10px;
+            line-height: 11px;
+        }
+
+        svg {
+            width: 17px;
+            height: 23px
+        }
+
+        &__login-text {
+            display: none;
+        }
+
+        &.authorized {
+            .b-header__name {
+                display: inline-block;
+            }
+
+            .b-header__login {
+                display: none;
+            }
+        }
+    }
+}
